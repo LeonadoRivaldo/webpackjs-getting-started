@@ -1,0 +1,28 @@
+{
+  "name": "webpackjs-getting-started",
+  "version": "1.0.0",
+  "description": "documentation guide of webpack",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonadoRivaldo/webpackjs-getting-started.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonadoRivaldo/webpackjs-getting-started/issues"
+  },
+  "homepage": "https://github.com/LeonadoRivaldo/webpackjs-getting-started#readme",
+  "devDependencies": {
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
