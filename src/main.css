@@ -1,0 +1,13 @@
+.todo,
+.hello{
+    color:red;
+}
+
+
+.done{
+    color: green;
+}
+
+.doing{
+    color:blue;
+}
