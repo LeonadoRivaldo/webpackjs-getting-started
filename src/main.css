@@ -1,6 +1,8 @@
-.todo,
+.todo{
+    color: red;
+}
 .hello{
-    color:red;
+    color:purple;
 }
 
 

@@ -1,17 +1,33 @@
 import './main.css';
+import Icon from './icon.png';
 
 import _ from 'lodash';
 
 
 function HelloWorld(){
     const element = document.createElement('h3');
+    element.style.display = 'flex';
+    element.style.alignItems = 'center';
+    element.style.flexFlow = 'row-reverse';
+    element.style.justifyContent = 'center';
+
+
+
+
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
     element.classList.add('hello');
+
+    const myIcon = new Image();
+    myIcon.src = Icon;
+    myIcon.style.width = '50px';
+    myIcon.style.marginRight = '10px';
+    element.appendChild(myIcon);
+
     return element;
 }
 
 
-document.body.appendChild(HelloWorld());
+document.body.prepend(HelloWorld());
 
 var guides = [
     { guide: "Getting Started", done:true },
