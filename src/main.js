@@ -1,5 +1,5 @@
 import Icon from './icon.png';
-import printMe from './print.js';
+import Print from './print.js';
 
 
 
@@ -28,7 +28,7 @@ async function HelloWorld(){
 function printButton(){
     const btn = document.createElement('button');
     btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
+    btn.onclick = Print.bind(null, 'Hello webpack!');
     return btn;
 }
 

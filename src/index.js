@@ -9,20 +9,20 @@ import GuideList from './guide-list.js';
 
 /** build html */
 const apptag = creatElement('section', { id: 'app' });
-document.body.appendChild(apptag);
+document.body.prepend(apptag);
 
 async function buildApp(){
-/** add elements */
-const appElement = document.getElementById('app');
+    /** add elements */
+    const appElement = document.getElementById('app');
 
-const hellowebpack = await HelloWorld();
+    const hellowebpack = await HelloWorld();
 
-document.body.appendChild(hellowebpack);
-appElement.appendChild(printButton());
+    appElement.appendChild(hellowebpack);
+    appElement.appendChild(printButton());
 
-/** Build list */
-const guide = new GuideList();
-guide.buildList(appElement);
+    /** Build list */
+    const guide = new GuideList();
+    guide.buildList(appElement);
 };
 
 buildApp();

@@ -6,11 +6,10 @@ const devServer = {
     contentBase:'./dist'
 };
 const entry = {
-    app: './src/index.js'
+    main: './src/index.js'
 };
 const output = {
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
 };
@@ -47,10 +46,23 @@ const modules = {
         }
     ]
 };
+const optimization = { 
+    runtimeChunk: 'single', 
+    moduleIds: 'hashed',
+    splitChunks: {
+        cacheGroups: {
+            vendor: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendors',
+                chunks: 'all'
+            }
+        }
+    } 
+};
 
 module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
-    devServer, entry, output, plugins,
+    devServer, entry, output, plugins, optimization,
     module: modules
 };
