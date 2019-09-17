@@ -1,15 +1,25 @@
-.todo{
-    color: red;
-}
-.hello{
-    color:purple;
-}
-
-
-.done{
-    color: green;
+@font-face {
+  font-family: "Ubuntu Mono Regular";
+  src: url("./UbuntuMono-Regular.ttf") format("ttf");
+  font-style: normal;
 }
 
-.doing{
-    color:blue;
+
+*{
+    font-family: 'Ubuntu Mono Regular', sans-serif;
+}
+
+.todo {
+  color: red;
+}
+.hello {
+  color: purple;
+}
+
+.done {
+  color: green;
+}
+
+.doing {
+  color: blue;
 }
